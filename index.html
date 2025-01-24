@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osmanlıca Makaleler</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: var(--bg-primary);">
+    <nav class="navbar navbar-expand-lg bg-dark-subtle">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#makaleler">Makaleler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Ömer Nasûhi Bilmen</a>
+                    </li>
+                </ul>
+                <div class="theme-switcher d-flex align-items-center">
+                    <i class="bi bi-sun-fill me-2 theme-icon" id="lightIcon"></i>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="themeSwitch">
+                    </div>
+                    <i class="bi bi-moon-fill ms-2 theme-icon" id="darkIcon"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobil için sabit tema değiştirici buton -->
+    <button class="theme-toggle d-md-none" id="themeToggleMobile">
+        <i class="bi bi-moon-fill"></i>
+    </button>
+
+    <main class="container py-5">
+        <!-- Hero Section -->
+        <section id="hero" class="text-center mb-5">
+            <div class="hero-content bg-dark-subtle p-5 rounded-3">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="omer-nasuhi-bilmen.jpg" 
+                             alt="Ömer Nasuhi Bilmen" 
+                             class="img-fluid rounded-3 hero-image"
+                             style="max-height: 400px; object-fit: cover;">
+                    </div>
+                    <div class="col-md-6 text-md-start">
+                        <h1 class="display-4 mb-4 ottoman-title">Ömer Nasûhi Bilmen</h1>
+                        <p class="lead mb-4">
+                            Ömer Nasuhi Bilmen hazretleri Osmanlı Devleti'nde doğmuş, kendisini yetiştirmiş ve
+Cumhuriyet devri ilk dönem ulemamızın önemli şahsiyetlerinden birisi olmuştur. Kendisi hem
+talebelik ettiği vakitlerde hem de muallim olduğu vakitlerde çeşitli makaleler te'lif etmiştir. Bu
+makaleler çeşitli dergilerde Osmanlıca veya Türkçe olarak neşredilmiştir. Lakin günümüzde
+temiz bir şekilde yapılan bir baskısı ne yazık ki bulunmamaktadır. Biz de naçizane kendimizi
+hazretin fahrî talebesi olarak gördüğümüzden makalelerini yayına hazırlamaya karar verdik.
+Makaleleri hem latinize hem de latin harflerinden temize çekme yoluyla hazırlayıp yayınlamaya
+çalışıyoruz. Allah Ömer Nasuhi hazretlerine rahmet, bizleri de onun şefaatine nail eylesin.
+Tevfîk yalnızca Allah'ın izniyledir.<br>
+Niyazımız o ola ki istifâdeli olsun.
+
+                        </p>
+                        <a href="#makaleler" class="btn btn-outline-light btn-lg">
+                            Makaleleri İncele
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="makaleler">
+            <h1 class="display-4 mb-4 text-center">Ömer Nasuhi Bilmen'in Makaleleri</h1>
+            
+            <div class="categories bg-dark-subtle p-4 rounded-3 mb-4">
+                <h3 class="h5 mb-3">Dil Seçenekleri</h3>
+                <div class="category-list d-flex flex-wrap gap-2">
+                    <button class="btn btn-outline-light active" data-category="all">Tümü</button>
+                    <button class="btn btn-outline-light" data-category="ottoman">Osmanlı Türkçesi</button>
+                    <button class="btn btn-outline-light" data-category="turkish">Türkçe</button>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/islamda-demokrasi-omer-nasuhi-bilmen.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>İslâmda Demokrasi
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>24 January 2025
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/bir-levha-i-ibret.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Ömer Nasuhi Bilmen Hazretlerinin Makalelerini Neşir
+Projesi
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>25 Ekim 2021
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/mehasin-i-edep.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Ömer
+Nasuhi Bilmen Hazretlerinin Makalelerini Neşir Projesi
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>18 Ekim 2021
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/imami-azamin-muctehitler-arasindaki-mevk.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Ömer
+Nasuhi Bilmen Hazretlerinin Makalelerini Neşir Projesi
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>18 Ekim 2021
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/kurandan-ayetler.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Kur'andan Ayetler: Allahın Kudret ve Keremi
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Haziran 1963
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/ayetel-ku-rsi-tefsiri.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Âyetülkürsî Meali Âlisi ve Tefsiri
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Mayıs 1963
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/kurani-kerim-meali.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Kuran-ı Kerim Meali ve Tefsiri
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Şubat 1963
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/tazarru-ve-niyaz.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Kur'andan Âyetler Tazarru ve Niyaz
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Ağustos 1962
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/infak.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Kur'andan Âyetler İnfak
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Temmuz 1962
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/kurandan-ayetler-du-nya-hayati.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Kur'andan Âyetler Dünya Varlığı
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Haziran 1962
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/nur-ayetleri-tefsiri-kasim-3.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Kur'an-ı Kerim'i Tetkik: Nur Ayetlerinin Meal-i Alisi ve Tefsiri
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Kasım 1961
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/nur-ayetleri-tefsiri-ekim-2.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Kur'an-ı Kerim'i Tetkik: Nur Ayetlerinin Meal-i Âlisi Tefsiri
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Ekim 1961
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/nur-ayetleri-tefsiri-eylu-l-1.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Nur Ayetlerinin Meal-i Alisi ve Tefsiri
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Eylül 1961
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/amerikalilara-cevap-6.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Amerikalıların Suallerine Cevap
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Kasım 1956
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/amerikalilara-cevap-7.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Amerikalıların Suallerine Cevap
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Kasım 1956
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/amerikalilara-cevap-5--ekim-.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Amerikalıların Suallerine Cevap
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Ekim 1956
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/bmm-mu-zakereleri-1.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Muhterem arkadaşlar ;
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Ekim 1956
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/amerikalilara-cevap-4--ekim-.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Amerikalıların Suallerine Cevap
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Ekim 1956
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/amerikalilara-cevap-3--eylu-l-2-.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Amerikalıların Suallerine Cevap
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Eylül 1956
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/amerikalilara-cevap--eylu-l-.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Amerikalıların Suallerine Cevap
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Eylül 1956
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/amerikalilarin-suallerine-cevap--eylu-l-.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Amerikalıların Suallerine Cevap
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Ağustos 1956
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/amerikalilarin-suallerine-cevap--agustos-.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Amerikalıların Suallerine Cevap
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Ağustos 1956
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/hayir-ve-s-er.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Hayır ve Şer
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Aralık 1951
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/tarihi-fikih.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Tarihi Fıkhın Mâhiyeti ve Fâideleri
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Kasım 1951
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/imam-ahmet-bin-hanbel.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>İmam Ahmed İbni Hanbel'in Müctehidler Arasındaki Mevkii
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Ağustos 1951
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/hakiki-bir-dinin-mahiyeti.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Hakiki Bir Dinin Mahiyeti
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Ağustos 1951
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/imam-s-afii.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>İmam Şafiînin Müctehitler Arasındaki Mevkii
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Temmuz 1951
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/imam-malik.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>İmam Malikinin Müçtehitler Arasındaki Mevkii
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Haziran 1951
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="turkish">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Türkçe</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/haizi-secde.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Haizi Secde-i Tilâveti
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>20 Haziran 1941
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/tevhid-bari.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Tevhid Bari
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Nisan 1925
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/intis-ari-islam.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>İntişar-ı İslam Tarihi
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>22 Ocak 1925
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/hissiyati-diniye.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Hiss-i Diyanet Fıtridir
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>1 Aralık 1924
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/kesreti-nufus-2.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Kesret-i Nüfus -II
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>20 Mart 1924
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/kesreti-nu-fus.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Kesret-i Nüfus -I: Nüfusun Çoğalmasına Müslümanlığın Verdiği Büyük
+Ehemmiyet
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>13 Mart 1924
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/teaddu-d-i-zevcat-2.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Taaddüd-i Zevcat Müessese-i İctimaiyyesi -II
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>6 Mart 1924
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/teaddu-di-zevcat-mu-essesi.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Taaddüd-i Zevcat Müessese-i İctimaiyyesi -I
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>28 Şubat 1924
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/sakat-ve-iskati-cenin.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>14 Şubat 1924
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>14 Şubat 1924
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/iftirak-i-zevceyn-2.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Müslümanlıkta İftirak-ı Zevceyn -II
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>20 Aralık 1923
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/iftirak-i-zevceyn-2.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Müslümanlıkta İftirak-ı Zevceyn -II
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>20 Aralık 1923
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/talebe-i-ulum-efendilerine.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Talebe-i Ulum Efendilere
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>19 Eylül 1913
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/fariza-i-savm.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Fariza-i Savm
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>23 Ağustos 1913
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/i-kaz.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>16 Ağustos 1913 Hicri: 12 Ramazan 1331, Rumi: 2 Ağustos 1329
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>16 Ağustos 1913
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/hissiyat-i-diniye.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Hissiyat-ı Diniye
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>2 Ağustos 1913
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/beyanu-l-hak-i-dare-i-aliyyesine-1.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Muhterem Beyanülhak İdare-i Aliyesine (I): İnegöl
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>23 Eylül 1912
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/leyle-i-regaib-ve-feyretu--l-mevahib.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Leyle-i Regaib ve Feyretü'l-Mevahib
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>24 Haziran 1912
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/hikmeti-i-slamiye.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Hikmet-i İslamiye
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>6 Mayıs 1912
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/afrikada-i-slamiyet.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>“Bir devleti etmiş idi tahrib-i zamane
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>15 Nisan 1912
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/sultan-selimi-ziyaret.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Sultan Selim'i Ziyaret
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>15 Nisan 1912
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/8-s-uhur-u-selase-mu-nasebetiyle-nasihat.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Şühur-ı Selase Münasebetiyle: Nasihat
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>31 Temmuz 1911
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/muhit-i-islamiyet.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Muhit-i İslamiyet
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>10 Temmuz 1911
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/tercu-me-i-hal-mehmet-hazik-efendi.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Tercüme-i Hal: Mehmed Hazik Efendi
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>2 Nisan 1911
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-category="ottoman">
+                    <div class="card h-100 bg-dark-subtle border-light">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Osmanlı Türkçesi</span>
+                            <h3 class="card-title h5 ottoman-title">
+                                <a href="articles/kainata-bir-nazar.html" class="text-dark text-decoration-none">
+                                    <i class="bi bi-journal-text me-2"></i>Kâinat’a Bir Nazar - 16 Ocak 1911
+                                </a>
+                            </h3>
+                            <p class="card-text small text-light-emphasis">
+                                <i class="bi bi-calendar3 me-2"></i>16 Ocak 1911
+                            </p>
+                        </div>
+                    </div>
+                </div></div></section>
+    </main>
+
+    <footer class="bg-dark-subtle text-center py-4 mt-5">
+        <div class="container">
+            <div class="mb-3">
+                <a href="https://github.com/mevlut-celik" class="text-decoration-none" target="_blank">
+                    <i class="bi bi-github fs-4"></i>
+                </a>
+            </div>
+            <p class="mb-0">Ahmet Şengül - Mevlüt Çelik</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

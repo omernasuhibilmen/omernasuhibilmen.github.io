@@ -1,0 +1,867 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Computer Modern", serif;
+    font-size: 12pt;
+    line-height: 1.5;
+}
+
+:root {
+    --bs-dark-rgb: 0, 0, 0;  /* Koyu lacivert */
+    /* Light mode değişkenleri */
+    --bg-primary: #ebeaea; /* Hafif gri arka plan */
+    --bg-secondary: #ffffff;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #dee2e6;
+    --card-bg: #ffffff;
+    --card-border: #e9ecef;
+    --accent-color: #0d6efd;
+}
+
+[data-bs-theme="dark"] {
+    /* Dark mode değişkenleri */
+    --bg-primary: #1a1a1a; /* Koyu gri arka plan */
+    --bg-secondary: #242424;
+    --text-primary: #ffffff;
+    --text-secondary: #adb5bd;
+    --border-color: #2d3846;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --accent-color: #3d8bfd;
+}
+
+body {
+    font-family: "Computer Modern", serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid #001a0f;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001a0f;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+article {
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.date {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--bg-secondary) !important;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+/* LaTeX Stili - Modern versiyon */
+.article-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Computer Modern", serif;
+    font-size: 12pt;
+    line-height: 1.5;
+}
+
+.article-content .title-block {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.article-content h1 {
+    font-size: 24pt;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.article-content h2 {
+    font-size: 18pt;
+    font-weight: normal;
+    margin: 2rem 0 1rem;
+    color: var(--text-primary);
+}
+
+.article-content h3 {
+    font-size: 14pt;
+    font-weight: normal;
+    margin: 1.5rem 0 1rem;
+    color: var(--text-primary);
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    hyphens: auto;
+    color: var(--text-primary);
+}
+
+/* Makale içi kod blokları için */
+.article-content pre {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    color: var(--text-primary);
+}
+
+/* Makale içi alıntılar için */
+.article-content blockquote {
+    border-left: 4px solid var(--accent-color);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    background-color: var(--bg-primary);
+    border-radius: 0 4px 4px 0;
+    color: var(--text-secondary);
+}
+
+/* Makale içi tablolar için */
+.article-content table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+}
+
+.article-content th,
+.article-content td {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.article-content th {
+    background-color: var(--bg-primary);
+    font-weight: 600;
+}
+
+/* Makale içi dipnotlar için */
+.article-content .footnote {
+    font-size: 10pt;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+/* Makale içi resimler için */
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+}
+
+/* Makale içi linkler için */
+.article-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.article-content a:hover {
+    border-bottom-color: var(--accent-color);
+    opacity: 0.8;
+}
+
+/* Makale içi liste öğeleri için */
+.article-content ul,
+.article-content ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    color: var(--text-primary);
+}
+
+.article-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Makale sayfası responsive düzenlemeler */
+@media (max-width: 768px) {
+    .article-content {
+        padding: 1rem;
+        font-size: 12pt;
+    }
+
+    .article-content h1 {
+        font-size: 20pt;
+    }
+
+    .article-content h2 {
+        font-size: 16pt;
+    }
+
+    .article-content h3 {
+        font-size: 14pt;
+    }
+}
+
+/* Dark mode için özel ayarlar */
+[data-bs-theme="dark"] .article-content {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+[data-bs-theme="dark"] .article-content blockquote {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-bs-theme="dark"] .article-content pre {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-bs-theme="dark"] .article-content th {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* LaTeX body stilleri */
+.latex-body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Computer Modern", serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.latex-article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.latex-article .title-block {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.latex-article .content {
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.5;
+}
+
+.latex-article h1 {
+    font-size: 24pt;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.latex-article h2 {
+    font-size: 18pt;
+    font-weight: normal;
+    margin: 2rem 0 1rem;
+    color: var(--text-primary);
+}
+
+.latex-article h3 {
+    font-size: 14pt;
+    font-weight: normal;
+    margin: 1.5rem 0 1rem;
+    color: var(--text-primary);
+}
+
+.latex-article .author {
+    font-size: 12pt;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.latex-article .date {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 12pt;
+}
+
+.latex-article .abstract {
+    margin: 2rem auto;
+    max-width: 600px;
+    font-style: italic;
+    color: var(--text-primary);
+}
+
+.latex-article .abstract h2 {
+    font-size: 14pt;
+    margin-bottom: 1rem;
+    font-style: normal;
+}
+
+.latex-article p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    hyphens: auto;
+    color: var(--text-primary);
+}
+
+/* Formül ve kod blokları için */
+.latex-article pre {
+    background: var(--bg-primary);
+    padding: 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+    font-family: 'Computer Modern', monospace;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+/* LaTeX sayfalarında header farklı olsun */
+.latex-body header {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    background-color: var(--bg-secondary);
+}
+
+/* Sayfa numaraları için */
+.latex-article {
+    counter-reset: page;
+    position: relative;
+}
+
+.latex-article section {
+    position: relative;
+}
+
+/* Referanslar bölümü için */
+.references {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.references li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    padding-left: 2.5em;
+    text-indent: -2.5em;
+}
+
+/* Dark mode için özel ayarlar */
+[data-bs-theme="dark"] .latex-article {
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+[data-bs-theme="dark"] .latex-article pre {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Osmanlıca Kategori Stilleri */
+.categories {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.category-button {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-button:hover,
+.category-button.active {
+    background: #fff;
+    color: #000c2d;
+}
+
+/* Makale kartlarında kategori etiketi */
+.article .category-tag {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Osmanlıca font için özel stil */
+.ottoman-title {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-outline-light {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.btn-outline-light:hover,
+.btn-outline-light.active {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+/* Özel animasyonlar */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+    .category-list {
+        justify-content: center;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Karanlık mod uyumluluğu */
+@media (prefers-color-scheme: dark) {
+    .card {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+    }
+}
+
+.card-text {
+    color: var(--text-secondary);
+    font-size: 12pt;
+    line-height: 1.5;
+}
+
+.badge {
+    background-color: var(--accent-color);
+}
+
+/* Tema değiştirici butonu için stil */
+.theme-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+/* Animasyonlar */
+.theme-transition {
+    transition: all 0.3s ease;
+}
+
+/* Kategori badge'leri için özel renkler */
+.badge.bg-primary {
+    background-color: #4a5d7c !important; /* Osmanlı Türkçesi için koyu mavi */
+}
+
+.badge.bg-success {
+    background-color: #28a745 !important; /* Türkçe için yeşil */
+}
+
+/* Normal Türkçe başlıklar için font */
+.card-title:not(.ottoman-title) {
+    font-family: "Computer Modern", serif;
+    font-size: 12pt;
+    line-height: 1.5;
+}
+
+/* Kart arka planları için */
+.bg-dark-subtle {
+    background-color: var(--bg-secondary) !important;
+}
+
+/* Footer arka planı için */
+footer.bg-dark-subtle {
+    background-color: var(--bg-secondary) !important;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Kategoriler bölümü arka planı */
+.categories.bg-dark-subtle {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color);
+}
+
+/* Navbar için */
+.navbar {
+    background-color: var(--bg-secondary) !important;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+}
+
+.navbar-brand, .nav-link {
+    color: var(--text-primary) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--border-color);
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+}
+
+.navbar-toggler-icon::before {
+    content: "\F479"; /* Bootstrap Icons menu icon */
+    font-family: "bootstrap-icons";
+    position: absolute;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Tema değiştirici stilleri */
+.theme-switcher {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+}
+
+.theme-icon {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.form-check-input {
+    cursor: pointer;
+    width: 3rem;
+    height: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+.form-check-input:checked {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Dark mode için navbar özel stilleri */
+[data-bs-theme="dark"] .navbar-toggler-icon::before {
+    color: var(--text-primary);
+}
+
+/* Computer Modern font import */
+@font-face {
+    font-family: "Computer Modern";
+    src: url("https://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunrm.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url("https://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbx.otf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url("https://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunti.otf");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url("https://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbi.otf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Temel font ayarı */
+* {
+    font-family: "Computer Modern", serif;
+    font-size: 12pt;
+    line-height: 1.5;
+}
+
+body {
+    font-family: "Computer Modern", serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Osmanlıca başlıklar için özel font - bu kalacak */
+.ottoman-title {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+}
+
+/* Diğer başlıklar için Computer Modern */
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.nav-link,
+.btn,
+.card-title:not(.ottoman-title),
+.card-text,
+footer {
+    font-family: "Computer Modern", serif;
+    font-size: 12pt;
+    line-height: 1.5;
+}
+
+/* Makale içeriği için */
+.article-content {
+    font-family: "Computer Modern", serif;
+    font-size: 12pt;
+    line-height: 1.5;
+}
+
+/* Başlık boyutları */
+h1 { font-size: 24pt; }
+h2 { font-size: 18pt; }
+h3 { font-size: 14pt; }
+h4, h5, h6 { font-size: 12pt; }
+
+/* Dipnotlar ve küçük metinler */
+.small, .text-light-emphasis, .footnote {
+    font-size: 10pt;
+    line-height: 1.5;
+}
+
+/* Responsive ayarlar - mobil için */
+@media (max-width: 768px) {
+    body {
+        font-size: 12pt;
+    }
+    
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    h3 { font-size: 14pt; }
+}
+
+/* Makale kartlarındaki linkler için */
+.text-dark.text-decoration-none {
+    color: var(--text-primary) !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.text-dark.text-decoration-none:hover {
+    color: var(--accent-color) !important;
+}
+
+/* LaTeX makale içindeki linkler için */
+.latex-article a {
+    color: var(--text-primary) !important;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.latex-article a:hover {
+    color: var(--accent-color) !important;
+    border-bottom-color: var(--accent-color);
+}
+
+/* Hero Section Stilleri */
+.hero-content {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.hero-image {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
+.hero-content h1 {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content .lead {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* Hero Section Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 2rem !important;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content .lead {
+        font-size: 1rem;
+        text-align: justify;
+        hyphens: auto;
+    }
+}
+
+/* Dark mode için hero özel stilleri */
+[data-bs-theme="dark"] .hero-content {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+[data-bs-theme="dark"] .hero-image {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* Footer stilleri */
+footer a {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+footer .bi-github {
+    font-size: 1.5rem;
+}
+
+footer p {
+    color: var(--text-primary);
+}
+
+/* Ömer Nasuhi Bilmen fotoğrafı için özel stil */
+.author-image {
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.author-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.author-caption {
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-style: italic;
+} 
