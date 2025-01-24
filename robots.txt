@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://omernasuhibilmen.github.io/sitemap.xml 
