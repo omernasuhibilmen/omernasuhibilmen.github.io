@@ -864,4 +864,27 @@ footer p {
     margin-top: 1rem;
     color: var(--text-secondary);
     font-style: italic;
+}
+
+/* Mobil uyumlu görsel stilleri */
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .about-image {
+        max-height: 400px;
+        object-fit: contain;
+        margin-bottom: 0;
+    }
+}
+
+/* Hero görseli için mevcut stiller korunsun */
+.hero-image {
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 0.5rem;
 } 

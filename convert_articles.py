@@ -79,6 +79,9 @@ def convert_docx_to_html(input_file):
         if not article_date:
             article_date = datetime.now().strftime('%d %B %Y')
         
+        # Başlığı içeriğe ekle
+        content = f'<h1 class="ottoman-title">{article_title}</h1>\n{content}'
+        
         # HTML şablonu
         html_template = '''<!DOCTYPE html>
 <html lang="tr" data-bs-theme="light">
@@ -473,14 +476,44 @@ def convert_pdf_to_html(pdf_file):
         logger.error(f"PDF işlenirken hata: {e}")
         raise
 
+def get_article_number(filename):
+    """Dosya adından makale numarasını çıkarır"""
+    match = re.match(r'^(\d+)[-_.]', filename)
+    if match:
+        return int(match.group(1))
+    return float('inf')  # Numarasız dosyalar en sona
+
 def main():
     try:
+        # articles klasörünü temizle
+        articles_folder = Path("articles")
+        if articles_folder.exists():
+            shutil.rmtree(articles_folder)
+        articles_folder.mkdir(exist_ok=True)
+        
+        # index.html'deki makale bölümünü temizle
+        index_path = Path('index.html')
+        with open(index_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Makale bölümünü boşalt
+        new_content = re.sub(
+            r'<div class="row g-4">.*?</div>\s*</section>',
+            '<div class="row g-4"></div></section>',
+            content,
+            flags=re.DOTALL
+        )
+        
+        with open(index_path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+            
         # Tüm makaleleri toplayacağımız liste
         all_articles = []
         
-        # Osmanlıca makaleleri topla
+        # Osmanlıca makaleleri işle
         ottoman_folder = Path("word_articles")
         ottoman_folder.mkdir(exist_ok=True)
+        
         for file in ottoman_folder.glob("*.docx"):
             logger.info(f"Osmanlıca makale işleniyor: {file}")
             article_filename, article_title = convert_docx_to_html(str(file))
@@ -514,9 +547,10 @@ def main():
                 'date': parse_turkish_date(article_date)
             })
 
-        # Türkçe makaleleri topla
+        # Türkçe makaleleri işle
         turkish_folder = Path("turkish_articles")
         turkish_folder.mkdir(exist_ok=True)
+        
         for file in turkish_folder.glob("*.docx"):
             logger.info(f"Türkçe makale işleniyor: {file}")
             article_filename, article_title = convert_docx_to_html(str(file))
@@ -550,15 +584,11 @@ def main():
                 'date': parse_turkish_date(article_date)
             })
 
-        # Makaleleri tarihe göre sırala
+        # Makaleleri tarihe göre sırala (en yeni en üstte)
         all_articles.sort(key=lambda x: x['date'], reverse=True)
         sorted_html = '\n'.join(article['html'] for article in all_articles)
 
         # index.html'i güncelle
-        index_path = Path('index.html')
-        with open(index_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
         new_content = re.sub(
             r'<div class="row g-4">.*?</div>\s*</section>',
             f'<div class="row g-4">{sorted_html}</div></section>',
