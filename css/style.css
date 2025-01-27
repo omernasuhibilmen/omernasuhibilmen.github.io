@@ -460,14 +460,15 @@ footer {
 }
 
 .card {
-    transition: transform 0.2s ease-in-out;
+    transition: all 0.2s ease;
     background-color: var(--card-bg);
     border-color: var(--card-border);
     color: var(--text-primary);
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .btn-outline-light {
@@ -887,4 +888,82 @@ footer p {
     max-height: 400px;
     object-fit: cover;
     border-radius: 0.5rem;
+}
+
+.card-link,
+.card-link:hover,
+.card-link *,
+.card-link:hover * {
+    text-decoration: none !important;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.card:hover .card-title {
+    color: var(--primary);
+}
+
+.card-body .badge[data-category="turkish"] {
+    background-color: #0d6efd !important;
+    border: none !important;
+    color: white !important;
+}
+
+.card-body .badge[data-category="ottoman"] {
+    background-color: #198754 !important;
+    border: none !important;
+    color: white !important;
+}
+
+/* Hover durumunda renklerin değişmemesi için */
+.card:hover .badge[data-category="turkish"],
+.card:hover .badge[data-category="ottoman"] {
+    background-color: inherit !important;
+}
+
+/* Kategori butonları için yeni stiller */
+.btn-outline-light[data-category] {
+    font-family: "Computer Modern", serif;
+    font-size: 12pt;
+}
+
+.btn-outline-light[data-category="turkish"] {
+    border-color: #4a5d7c !important;
+
+}
+
+.btn-outline-light[data-category="turkish"]:hover,
+.btn-outline-light[data-category="turkish"].active {
+    background-color: #4a5d7c !important;
+    border-color: #4a5d7c !important;
+    color: white;
+}
+
+.btn-outline-light[data-category="ottoman"] {
+    border-color: #198754;
+}
+
+.btn-outline-light[data-category="ottoman"]:hover,
+.btn-outline-light[data-category="ottoman"].active {
+    background-color: #198754;
+    border-color: #198754;
+    color: white;
+}
+
+/* Tümü butonu için varsayılan stil kalabilir */
+.btn-outline-light[data-category="all"] {
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-outline-light[data-category="all"]:hover,
+.btn-outline-light[data-category="all"].active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
 } 

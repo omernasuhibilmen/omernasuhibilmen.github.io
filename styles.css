@@ -1,9 +1,7 @@
 .card-link,
 .card-link:hover,
 .card-link *,
-.card-link:hover *,
-.card-title.h5.ottoman-title,
-h3.card-title {
+.card-link:hover * {
   text-decoration: none !important;
 }
 
@@ -25,10 +23,6 @@ h3.card-title {
 
 .card:hover .card-title {
   color: var(--primary);
-}
-
-.card-link:hover {
-  text-decoration: none;
 }
 
 .card-body .badge[data-category="turkish"] {
