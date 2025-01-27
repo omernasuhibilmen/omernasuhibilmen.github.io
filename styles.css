@@ -1,0 +1,58 @@
+.card-link,
+.card-link:hover,
+.card-link *,
+.card-link:hover *,
+.card-title.h5.ottoman-title,
+h3.card-title {
+  text-decoration: none !important;
+}
+
+.card {
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.card:hover .card-title {
+  color: var(--primary);
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+.card-body .badge[data-category="turkish"] {
+  background-color: #0d6efd !important;
+  border: none !important;
+  color: white !important;
+}
+
+.card-body .badge[data-category="ottoman"] {
+  background-color: #198754 !important;
+  border: none !important;
+  color: white !important;
+}
+
+/* Hover durumunda renklerin değişmemesi için */
+.card:hover .badge[data-category="turkish"],
+.card:hover .badge[data-category="ottoman"] {
+  background-color: inherit !important;
+}
+
+.ottoman-title {
+  text-decoration: none !important;
+}
+
+.h5 {
+  text-decoration: none !important;
+} 
