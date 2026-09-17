@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img"
+     aria-label="ÖNB — Ömer Nasûhi Bilmen Makaleler Arşivi">
+  <rect width="64" height="64" rx="14" fill="#8a5a1c"/>
+  <!-- Harfler yazı tipinden bağımsız olsun diye yol olarak çizildi -->
+  <g fill="none" stroke="#fbf9f5" stroke-width="4"
+     stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="17" cy="35" r="8"/>
+    <path d="M32 25V45M43 25V45M32 25L43 45"/>
+    <path d="M49.5 25V45"/>
+    <path d="M49.5 25a5 5 0 0 1 0 10"/>
+    <path d="M49.5 35a5 5 0 0 1 0 10"/>
+  </g>
+  <circle cx="13.5" cy="20" r="1.9" fill="#fbf9f5"/>
+  <circle cx="20.5" cy="20" r="1.9" fill="#fbf9f5"/>
+</svg>

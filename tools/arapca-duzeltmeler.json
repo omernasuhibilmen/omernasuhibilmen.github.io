@@ -1,0 +1,34 @@
+[
+  {
+    "dosya": "mehasin-i-edep.html",
+    "ara": "<p><span dir=\"rtl\">از ﺧﺪا ﺟ</span>iiᖔ<span dir=\"rtl\">ﻢ ﺗﻮﻓﯿﻖ ادب</span>\nᣍ.<span dir=\"rtl\">ادب ﻣﺤﺮوم ﮔﺸﺖ از ﻟﻄﻒ رب</span></p>",
+    "yaz": "<p><span dir=\"rtl\" lang=\"fa\" class=\"onarildi\">از خدا جوییم توفیق ادب</span><br />\n<span dir=\"rtl\" lang=\"fa\" class=\"onarildi\">بی‌ادب محروم گشت از لطف رب</span></p>",
+    "baslik": "Mevlânâ, Mesnevî (Farsça beyit)",
+    "gerekce": "Mesnevî’nin I. defterindeki meşhur beyit. Kaynakta “جوییم” ve “بی‌ادب” kelimelerinin harfleri bozuk gliflerle (ii ᖔ / ᣍ.) yer değiştirmiş. Makalenin hemen altında verdiği tercüme beyitle birebir örtüşüyor.",
+    "guven": "yüksek"
+  },
+  {
+    "dosya": "mehasin-i-edep.html",
+    "ara": "<p>- <span dir=\"rtl\">َ ً ﱠ</span></p>\n</blockquote>\n<p><span dir=\"rtl\">ْ َ ْ َ ُ ﱡ</span></p>\n<blockquote>\n<p><span dir=\"rtl\">أﻳﻬﺎ اﻟﻔﺎﺧﺮ ﺟﻬ</span>t <span dir=\"rtl\">ِ</span>ᗷ<span\ndir=\"rtl\">ﺎﻟ</span> <span dir=\"rtl\">ﺴﺐ</span></p>\n<p><span dir=\"rtl\">إﻧﻤﺎ اﻟﻨﺎس ﻷمٍ وﻷب إﻧﻤﺎ اﻟﻔﺨﺮ ﻟﻌﻘﻞٍ ﺛﺎ</span>ᗷ<span\ndir=\"rtl\">ﺖٍ</span></p>\n</blockquote>\n<p>- <span dir=\"rtl\">َ</span></p>\n<p><span dir=\"rtl\">ْ َ َ َ َ َ</span></p>\n<blockquote>\n<p><span dir=\"rtl\">وﺣ</span>i<span dir=\"rtl\">ﺎءٍ وﻋﻔﺎفٍ\nوأدب</span><sup>2</sup></p>",
+    "yaz": "</blockquote>\n<blockquote>\n<p><span dir=\"rtl\" lang=\"ar\" class=\"onarildi\">أيها الفاخر جهلاً بالنسب</span><br />\n<span dir=\"rtl\" lang=\"ar\" class=\"onarildi\">إنما الناس لأمٍ ولأب</span><br />\n<span dir=\"rtl\" lang=\"ar\" class=\"onarildi\">إنما الفخر لعقلٍ ثابتٍ</span><br />\n<span dir=\"rtl\" lang=\"ar\" class=\"onarildi\">وحياءٍ وعفافٍ وأدب</span><sup>2</sup></p>",
+    "baslik": "Arapça dörtlük",
+    "gerekce": "Yalnız dört harf onarıldı: جهلاً, النسب, ثابتٍ, حياءٍ. Harflerin yerini ᗷ ve i glifleri almıştı. 2 numaralı dipnottaki tercüme dörtlüğün her mısraını karşılıyor. Harflerden kopmuş, sayfaya dağılmış hareke parçacıkları (“َ ً ﱠ” gibi) metnin gövdesinden çıkarıldı.",
+    "guven": "yüksek"
+  },
+  {
+    "dosya": "mehasin-i-edep.html",
+    "ara": "<p>meab Efendimiz (s.a.v.); <sup>3</sup><span dir=\"rtl\">ﺔ</span>i<span\ndir=\"rtl\">اﻟﻌﺎﻓ</span> <span dir=\"rtl\">ﻣﻦ</span></p>\n<p><span dir=\"rtl\">ا</span>y” ᢕ <span dir=\"rtl\">ﺧ</span></p>\n</blockquote>\n<p><span dir=\"rtl\"><br />\nﻟﻢ</span> i<span dir=\"rtl\">ﻌﻂ</span> ᗷ<span dir=\"rtl\">ﻌﺪ اﻟ</span>i<span\ndir=\"rtl\">ﻘ</span> ᢕ <span dir=\"rtl\"></span>ᣌ.</p>\n<blockquote>\n<p><span dir=\"rtl\"><br />\nﺳﻞ ﷲ اﻟﻌﻔﻮ واﻟﻌﺎﻓ</span>i<span dir=\"rtl\">ﺔ ﻓﺈن أﺣﺪ</span>”<span\ndir=\"rtl\">ا</span></p>",
+    "yaz": "<p>meab Efendimiz (s.a.v.); <sup>3</sup></p>\n</blockquote>\n<blockquote>\n<p><span dir=\"rtl\" lang=\"ar\" class=\"onarildi\">سل الله العفو والعافية فإن أحدًا لم يعط بعد اليقين خيرًا من العافية</span></p>",
+    "baslik": "Hadîs-i şerîf (Tirmizî)",
+    "gerekce": "Hadisin parçaları kaynakta ters sırada ve üç ayrı paragrafa dağılmış hâlde duruyordu (… من العافية / خيرًا / لم يعط بعد اليقين / سل الله العفو والعافية فإن أحدًا). Doğru okuma sırasına göre birleştirildi; 3 numaralı dipnot hadisi Tirmizî 3514 olarak künyeliyor. Kaynakta “سل” tekil kipinde yazılmış olduğu için öylece bırakıldı (Tirmizî nüshalarında “سلوا” çoğul kipi geçer).",
+    "guven": "yüksek"
+  },
+  {
+    "dosya": "mehasin-i-edep.html",
+    "ara": "<p><span dir=\"rtl\">ﺻﺤ</span>ᘘ<span dir=\"rtl\">ﺖ</span> ᗺ<span\ndir=\"rtl\">ﺎ</span>’ <span dir=\"rtl\"></span>ᢕ <span\ndir=\"rtl\"></span>y.<span dir=\"rtl\">ە رو</span>i<span dir=\"rtl\">ﺎن\nﻧ</span>ᗖᖔ<span dir=\"rtl\">ــﻬﺎر دوﻟﺖ اﺳﺖ ﺟﺎﻣﻪ</span> ᗷ<span dir=\"rtl\">ﺎد\nﺻ</span>ᘘ<span dir=\"rtl\">ﺎ از</span> S<span dir=\"rtl\">ﻞ ﻣﻌﻄﺮ</span> ᣤ\n<span dir=\"rtl\">ﺷﻮد</span><sup>4</sup></p>",
+    "yaz": "<p><span dir=\"rtl\" lang=\"fa\" class=\"onarildi\">صحبت پاکیزه‌رویان نوبهار دولت است</span><br />\n<span dir=\"rtl\" lang=\"fa\" class=\"onarildi\">جامه باد صبا از گل معطر می‌شود</span><sup>4</sup></p>",
+    "baslik": "Farsça beyit",
+    "gerekce": "Bozuk glifler harf harf karşılandı: ᘘ→ب, ᗺ’→پاک, ᢕ→ی, y.ە→زه, ᗖᖔ→وب, S→گ, ᣤ→می. 4 numaralı dipnottaki tercüme (“Temîz yüzlü bir kimse ile sohbet… bâd-ı sabâ… gülden…”) her iki mısraı da doğruluyor.",
+    "guven": "yüksek"
+  }
+]
